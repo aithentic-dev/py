@@ -54,8 +54,8 @@ def save_to_csv(video_metadata, transcript_data, output_folder):
     utc_timestamp = datetime.utcnow().strftime('%Y%m%d_%H%M%S')
     
     # Define the output file path with UTC timestamp and video ID
-    #output_file = os.path.join(output_folder, f"{video_metadata['video_id']}_{utc_timestamp}_transcript.csv")
-    output_file = "./output/transcript.csv"
+    output_file = os.path.join(output_folder, f"{video_metadata['video_id']}_{utc_timestamp}_transcript.csv")
+    #output_file = "./output/transcript.csv"
 
     
     # Define the headers for the CSV
@@ -79,7 +79,7 @@ def save_to_csv(video_metadata, transcript_data, output_folder):
 # Example usage
 video_id = "7nB2v1Aq3cg"  # Remove the "&t" part if it's included in the URL
 api_key = "AIzaSyDI1lTwrd8IuGCfuaeGqSVN1U51coaJkig"  # Replace with your YouTube Data API key
-output_folder = "./output"
+output_folder = "./output/raw"
 
 # Fetch video metadata
 video_metadata = get_video_metadata(video_id, api_key)
