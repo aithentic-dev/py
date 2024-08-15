@@ -75,9 +75,9 @@ def process_transcript_from_csv(video_id, raw_folder, output_folder):
     
     # Save the cleaned transcript to a new file
     with open(output_file, 'w', encoding='utf-8') as file:
-        file.write("Original Transcript:\n")
-        file.write(transcript_text + "\n\n")
-        file.write("Cleaned Transcript:\n")
+        #file.write("Original Transcript:\n")
+        #file.write(transcript_text + "\n\n")
+        #file.write("Cleaned Transcript:\n")
         file.write(cleaned_transcript)
     
     print(f"\nCleaned transcript saved to {output_file}")

@@ -3,7 +3,7 @@ from openai import OpenAI
 from datetime import datetime
 from youtube_transcript_api import YouTubeTranscriptApi
 
-api_key = ''  # Add your API key here
+api_key = '' # Add your API key here
 client = OpenAI(api_key=api_key)
 
 # Function to clean the transcript using OpenAI (gpt-4)
@@ -48,9 +48,9 @@ def process_youtube_transcript(video_id, output_folder):
 
         # Save the cleaned transcript to a file
         with open(output_file, 'w', encoding='utf-8') as file:
-            file.write("Original Transcript:\n")
-            file.write(transcript_text + "\n\n")
-            file.write("Cleaned Transcript:\n")
+           # file.write("Original Transcript:\n")
+           # file.write(transcript_text + "\n\n")
+           # file.write("Cleaned Transcript:\n")
             file.write(cleaned_transcript)
         
         print(f"\nCleaned transcript saved to {output_file}")
@@ -59,3 +59,5 @@ def process_youtube_transcript(video_id, output_folder):
 video_id = "7nB2v1Aq3cg"
 output_folder = "./output/openai4"  # Replace with your desired output folder path
 process_youtube_transcript(video_id, output_folder)
+
+
